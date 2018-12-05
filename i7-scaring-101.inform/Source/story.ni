@@ -286,7 +286,7 @@ describe room gone into rule response (C) is "[The actor] [if the actor is the y
 
 standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] with [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face.".
 
-standard report exiting rule response (C) is "[The actor] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the noun].".
+standard report exiting rule response (C) is "[The actor] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from].".
 
 [Various rules to control NPCs.]
 Section 5 - Every Turn Rules
@@ -376,7 +376,7 @@ When play begins:
 	now the maximum score is N;
 	now the right hand status line is "Score: [score] / [maximum score]";
 	say "[italic type]Thursday night. Thursday, a concept that means very little to the recently deceased, which [we] most certainly [regarding the player][are]; and night, which as it turns out, is quickly becoming [our] favourite part of whole night-day dichotomy.[paragraph break]Haunting is on the cards for this particular evening. The supernatural, as it happens, is perfectly natural - common even. [We]['ve] chosen a typical suburban house inhabited by a small family for the occasion. [Our] aim - confuse them, creep them out and scare them silly![paragraph break][We]['re] still new to this whole possession malarky, but an undead buddy of [ours] has kindly agreed to come along to offer pointers here and there. He said he'd meet you there.[roman type][paragraph break][bold type]Hint: [roman type]To possess an item, try [']>[fixed letter spacing]haunt the window[variable letter spacing]['] or [']>[fixed letter spacing]haunt the lamp[variable letter spacing]['].[paragraph break]";
-	move the player to the Landing.
+	move the player to the Landing, without printing a room description.
 
 [A very simple scene set-up.]
 Sound Asleep is a scene. Sound asleep begins when every victim is asleep. Sound Asleep ends when a victim is not asleep.
@@ -397,7 +397,7 @@ When Run to Mommy begins:
 
 [End the story when everyone is scared.]
 When Paranormal Activity ends:
-	end the story finally saying "[italic type]After scaring the poor family half to death, [we] decide to return to the ether before [we] do any serious damage.[paragraph break]What a night! Maybe this being dead thing business isn't as dull as [we][']d initially suspected. As you shimmer outside preparing to leave, the teddy bear catches you up. 'Personally, I'd give you [grade].' he comments, only half-jokingly. [assessment]!".
+	end the story finally saying "[italic type]After scaring the poor family half to death, [we] decide to return to the ether before [we] do any serious damage.[paragraph break]What a night! Maybe this being dead business isn't as dull as [we][']d initially suspected. As you shimmer outside preparing to leave, the teddy bear catches you up. 'Personally, I'd give you [grade].' he comments, only half-jokingly. [assessment]!".
 
 [A table and some tokens to quantify and report the score at the end.]
 Table of Grades
@@ -438,7 +438,7 @@ The Landing is a room. The description of it is "A [framed family photo] hangs o
 
 Haunting the ball is creepy behavior. The weirdness of the ball is "The ball spontaneously rolls off [if the ball is in the Landing]down the Hallway[otherwise]towards the Landing[end if].".
 
-The framed family photo is fixed in place. Haunting the family photo is creepy behavior. The description of the family photo is "A tacky portrait of the family [we]['][if Sound Asleep is happening]'re about to terrorise[otherwise]ve been terrorising[end if].". The weirdness of the family photo is "One by one, the individual eyes of each family member are poked out as if by an invisible pencil. As they lose their eyes, the expression on their face takes on a particularly uncanny smile.[paragraph break]The very moment this grotesque work of performance art comes to a finish, the photo returns to its usual state of tackiness.".
+The framed family photo is fixed in place. Haunting the family photo is creepy behavior. The description of the family photo is "A tacky portrait of the family [we]['][if Sound Asleep is happening]re about to terrorise[otherwise]ve been terrorising[end if].". The weirdness of the family photo is "One by one, the individual eyes of each family member are poked out as if by an invisible pencil. As they lose their eyes, the expression on their face takes on a particularly uncanny smile.[paragraph break]The very moment this grotesque work of performance art comes to a finish, the photo returns to its usual state of tackiness.".
 
 [The Hallway]
 The Hallway is a room. The description of it is "[A mirror] hangs on the wall here.[first time] 'How incredibly vain the living are' [we] ponder for a few moments.[only] [A bedroom door] leads[if the Master Bedroom is visited] back[end if] in to the master bedroom. The landing lies to the north.". The Hallway is south of the Landing. A mirror and a pedestal are in the Hallway.
