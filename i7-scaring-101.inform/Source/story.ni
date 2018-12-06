@@ -129,6 +129,7 @@ Haunting a supporter is creepy behavior.
 
 [A few custom verbs]
 To wake is a verb.
+To head is a verb.
 To scream is a verb.
 
 [Creepy behavior
@@ -254,7 +255,7 @@ After an actor entering a bunk when the player can see the actor:
 	now break-required is false;
 	continue the action.
 
-[Make sure the teddy bear anticipates victim movement, so as not to get caught in the act.]
+[Describe victim movement making sure the teddy bear anticipates it, so as not to get caught in the act.]
 After an actor which is not the teddy bear going a direction:
 	if the teddy bear can be seen by the actor and the actor is a victim:
 		if the teddy bear can be seen by the player:
@@ -274,8 +275,16 @@ After an actor which is not the teddy bear going a direction:
 		let bearing be the best route from the room gone from to the room gone to, using doors;
 		let origin be "[the room gone from]" in lower case;
 		let destination be "[the room gone to]" in lower case;
-		say "[The actor] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][go][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
+		say "[if the actor is mentioned and the actor is female]She[otherwise if the actor is mentioned]He[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
 		now break-required is false.
+		
+After an actor switching off a device when the actor can be seen by the player:
+	say "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off. [run paragraph on]";
+	now break-required is true.
+
+After an actor exiting when the actor can be seen by the player:	
+	say "[if the actor is mentioned and the actor is female]She[otherwise if the actor is mentioned]He[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from]. [run paragraph on]";
+	now break-required is true.
 
 [Custom descriptions for the teddy bear.]	
 After the teddy bear going a direction when the player can see the teddy bear:
@@ -296,14 +305,8 @@ After printing the name of the passive teddy bear while printing the locale desc
 After printing the name of the teddy bear when Finding Teddy is happening:
 	now the teddy bear is discovered.
 	
-[Custom responses for switching off devices, leaving the location and getting back into bed.]
-standard report switching off rule response (A) is "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off.".
-	
-[describe room gone into rule response (C) is "".]
-
+[Custom response for getting back into bed.]
 standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] with [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face.".
-
-standard report exiting rule response (C) is "[The actor] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from].".
 
 [Various rules to control NPCs.]
 Section 5 - Every Turn Rules
@@ -369,7 +372,7 @@ Every turn when the teddy bear is passive:
 [Every so often, when it's safe, the teddy bear will whisper advice to the player on how to continue.]	
 A last every turn rule:
 	if the player can see the active teddy bear and a random chance of 1 in 5 succeeds:
-		say "The teddy bear whispers '[one of]Keep in mind[or]Don't forget[or]It's worth giving a little thought to[purely at random] [one of]rule #1: always consider your surroundings[or]rule #2: make sure to take your time[or]rule #3: variety is vital to a good haunt[at random]'.";
+		say "'[one of]Keep in mind[or]Don't forget[or]It's worth giving a little thought to[purely at random] [one of]rule #1: always consider your surroundings[or]rule #2: make sure to take your time[or]rule #3: variety is vital to a good haunt[at random]' [if the teddy bear is mentioned]he whispers[otherwise]whispers [the teddy bear][end if].";
 		now break-required is false;
 
 [Add a paragraph break if it is needed.]

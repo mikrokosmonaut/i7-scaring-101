@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-13">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-1354"/>
+  <activeNode nodeId="node-1388"/>
   <item nodeId="node-13">
     <command xml:space="preserve">i7-scaring-101</command>
     <result xml:space="preserve">Thursday night. Thursday, a concept that means very little to the recently deceased, which you most certainly are; and night, which as it turns out, is quickly becoming your favourite part of whole night-day dichotomy.&#x000A;&#x000A;Haunting is on the cards for this particular evening. The supernatural, as it happens, is perfectly natural - common even. You've chosen a typical suburban house inhabited by a small family for the occasion. Your aim - confuse them, creep them out and scare them silly!&#x000A;&#x000A;You're still new to this whole possession malarky, but an undead buddy of yours has kindly agreed to come along to offer pointers here and there. He said he'd meet you there.&#x000A;&#x000A;Hint: To possess an item, try '&gt;haunt the window' or '&gt;haunt the lamp'.&#x000A;&#x000A;Scaring 101&#x000A;An Interactive Fiction by Mikrokosmonaut&#x000A;Release 1 / Serial number 181206 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. "The illusion of permanence" you think to yourself. A wooden door leads in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun (read horror) is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;&gt;</result>
@@ -1473,7 +1473,7 @@
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-179"/>
       <child nodeId="node-197"/>
@@ -1650,7 +1650,7 @@
     <command xml:space="preserve">in</command>
     <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a teddy bear with a bored look on his face, a lamp and a closet here.&#x000A;&#x000A;"Psst! It's me" hisses your plush companion.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-198"/>
       <child nodeId="node-201"/>
@@ -1682,29 +1682,30 @@
   </item>
   <item nodeId="node-201">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles in from the Child's Bedroom. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles out into the landing from the child's bedroom. "Don't forget rule #1: always consider your surroundings" he whispers.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-202"/>
     </children>
   </item>
   <item nodeId="node-202">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. "How incredibly vain the living are" you ponder for a few moments. A bedroom door leads in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a pedestal (on which is a radio) here.&#x000A;&#x000A;The teddy bear waddles in from the Landing. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. "How incredibly vain the living are" you ponder for a few moments. A bedroom door leads in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a pedestal (on which is a radio) here.&#x000A;&#x000A;The teddy bear waddles into the hallway from the landing. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-203"/>
     </children>
   </item>
   <item nodeId="node-203">
     <command xml:space="preserve">haunt radio</command>
-    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;[Your score has just gone up by three points.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;"Don't forget rule #3: variety is vital to a good haunt" whispers the teddy bear.&#x000A;&#x000A;[Your score has just gone up by three points.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-204"/>
+      <child nodeId="node-1386"/>
     </children>
   </item>
   <item nodeId="node-204">
@@ -1719,6 +1720,30 @@
   <item nodeId="node-205">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. A bedroom door leads back in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a young woman, a teddy bear and a pedestal (on which is a radio) here.&#x000A;&#x000A;The teddy bear immediately drops to the floor to evade suspicion. With a confused look on her face, the young woman switches the radio off.&#x000A;&#x000A;The young woman goes into the Master Bedroom, looking fairly confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1386">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear collapses to the floor in anticipation of someone coming. The bearded man arrives from the Master Bedroom, looking quite confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1387"/>
+    </children>
+  </item>
+  <item nodeId="node-1387">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a confused look on his face, the bearded man switches the radio off. He goes into the master bedroom, looking fairly confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1388"/>
+    </children>
+  </item>
+  <item nodeId="node-1388">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear gets to his feet. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -5953,7 +5978,7 @@
   </item>
   <item nodeId="node-693">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a teddy bear with a bored look on his face, a lamp and a closet here.&#x000A;&#x000A;"Psst! It's me" hisses your plush companion.&#x000A;&#x000A;The teddy bear whispers "Don't forget rule #1: always consider your surroundings".&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a teddy bear with a bored look on his face, a lamp and a closet here.&#x000A;&#x000A;"Psst! It's me" hisses your plush companion.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -6957,19 +6982,20 @@
   </item>
   <item nodeId="node-806">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles into the landing from the child's bedroom. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles out into the landing from the child's bedroom. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-807"/>
       <child nodeId="node-810"/>
+      <child nodeId="node-1369"/>
     </children>
   </item>
   <item nodeId="node-807">
     <command xml:space="preserve">in</command>
     <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a lamp and a closet here.&#x000A;&#x000A;The teddy bear waddles into the child's bedroom from the landing. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-808"/>
       <child nodeId="node-1294"/>
@@ -6992,18 +7018,18 @@
   </item>
   <item nodeId="node-1294">
     <command xml:space="preserve">haunt bed</command>
-    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy wakes up not quite sure of what's going on. The teddy bear immediately collapses to the floor to evade suspicion. &#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy wakes up not quite sure of what's going on. The teddy bear immediately drops to the floor to evade suspicion. &#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1295"/>
     </children>
   </item>
   <item nodeId="node-1295">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear quietly crawls into the landing from the child's bedroom. The teddy bear gets to his feet. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear quietly crawls out into the landing from the child's bedroom. The teddy bear gets to his feet. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1296"/>
     </children>
@@ -7052,7 +7078,7 @@
   </item>
   <item nodeId="node-811">
     <command xml:space="preserve">haunt radio</command>
-    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;The teddy bear whispers "Don't forget rule #3: variety is vital to a good haunt".&#x000A;&#x000A;[Your score has just gone up by three points.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;The young woman gets out of the king-sized bed. "Keep in mind rule #2: make sure to take your time" whispers the teddy bear.&#x000A;&#x000A;[Your score has just gone up by three points.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -7156,7 +7182,7 @@
   </item>
   <item nodeId="node-1313">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear collapses to the floor in anticipation of someone coming. The young boy arrives from the Landing, looking quite confused.&#x000A;&#x000A;The young boy arrives from the north.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear collapses to the floor in anticipation of someone coming. The young boy arrives from the Landing, looking quite confused.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -7165,9 +7191,9 @@
   </item>
   <item nodeId="node-1314">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a confused look on his face, the young boy switches the radio off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a confused look on his face, the young boy switches the radio off. He goes towards the landing, looking fairly confused.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1315"/>
     </children>
@@ -7179,6 +7205,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-1316"/>
+      <child nodeId="node-1375"/>
     </children>
   </item>
   <item nodeId="node-1316">
@@ -7292,6 +7319,90 @@
   <item nodeId="node-1328">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear gets to his feet. The teddy bear whispers "It's worth giving a little thought to rule #2: make sure to take your time".&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1375">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1376"/>
+    </children>
+  </item>
+  <item nodeId="node-1376">
+    <command xml:space="preserve">haunt radio</command>
+    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1377"/>
+    </children>
+  </item>
+  <item nodeId="node-1377">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear collapses to the floor in anticipation of someone coming. The bearded man arrives from the Master Bedroom, looking quite confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1378"/>
+    </children>
+  </item>
+  <item nodeId="node-1378">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a confused look on his face, the bearded man switches the radio off.&#x000A;&#x000A;The bearded man goes into the master bedroom, looking fairly confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1369">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1370"/>
+    </children>
+  </item>
+  <item nodeId="node-1370">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;"It's worth giving a little thought to rule #3: variety is vital to a good haunt" whispers the teddy bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1371"/>
+    </children>
+  </item>
+  <item nodeId="node-1371">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;"Keep in mind rule #2: make sure to take your time" whispers the teddy bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1372"/>
+    </children>
+  </item>
+  <item nodeId="node-1372">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a lamp and a closet here.&#x000A;&#x000A;The teddy bear waddles into the child's bedroom from the landing. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1373"/>
+    </children>
+  </item>
+  <item nodeId="node-1373">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles out into the landing from the child's bedroom. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1374"/>
+    </children>
+  </item>
+  <item nodeId="node-1374">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a lamp and a closet here.&#x000A;&#x000A;The teddy bear waddles into the child's bedroom from the landing. "It's worth giving a little thought to rule #3: variety is vital to a good haunt" he whispers.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -7568,7 +7679,7 @@
   </item>
   <item nodeId="node-845">
     <command xml:space="preserve">haunt bed</command>
-    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy wakes up not quite sure of what's going on. The teddy bear immediately collapses to the floor to avoid being noticed. &#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy wakes up not quite sure of what's going on. The teddy bear immediately drops to the floor to avoid being noticed. &#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -7578,7 +7689,7 @@
   </item>
   <item nodeId="node-846">
     <command xml:space="preserve">haunt bed</command>
-    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy screams. The young boy leaps out of the child's bed.&#x000A;&#x000A;The young boy runs off into the Landing, looking fairly scared&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy screams. He leaps out of the child's bed. He runs out into the landing, looking fairly scared.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -7655,9 +7766,9 @@
   </item>
   <item nodeId="node-854">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a young boy and a ball here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a young boy and a ball here.&#x000A;&#x000A;The young boy runs towards the hallway, looking fairly scared.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-855"/>
       <child nodeId="node-1287"/>
@@ -7665,9 +7776,9 @@
   </item>
   <item nodeId="node-855">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. "How incredibly vain the living are" you ponder for a few moments. A bedroom door leads in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a young boy and a pedestal (on which is a radio) here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. "How incredibly vain the living are" you ponder for a few moments. A bedroom door leads in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a young boy and a pedestal (on which is a radio) here.&#x000A;&#x000A;The young boy runs into the master bedroom, looking fairly scared.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-856"/>
       <child nodeId="node-1310"/>
@@ -7787,11 +7898,12 @@
   </item>
   <item nodeId="node-1310">
     <command xml:space="preserve">haunt radio</command>
-    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;The teddy bear waddles into the hallway from the landing. &#x000A;&#x000A;[Your score has just gone up by two points.]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;The teddy bear waddles into the hallway from the landing. "Keep in mind rule #2: make sure to take your time" he whispers.&#x000A;&#x000A;[Your score has just gone up by two points.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
       <child nodeId="node-1311"/>
+      <child nodeId="node-1379"/>
     </children>
   </item>
   <item nodeId="node-1311">
@@ -7806,6 +7918,66 @@
   <item nodeId="node-1312">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a confused look on her face, the young woman switches the radio off.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1379">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Master Bedroom.&#x000A;&#x000A;Master Bedroom&#x000A;Moonlight shines in through the large window, the shadow of the frame artificially segmenting the man and woman as if silently commenting on the state of their marriage.  A bedroom door leads back out to the hallway. &#x000A;&#x000A;You can see a young woman, the king-sized bed (under the covers of which are a scared young boy and a confused bearded man), a TV and a bed-side table (on which are an alarm clock and a flashlight) here.&#x000A;&#x000A;The young woman goes out into the hallway, looking fairly confused.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1380"/>
+    </children>
+  </item>
+  <item nodeId="node-1380">
+    <command xml:space="preserve">haunt alarm</command>
+    <result xml:space="preserve">The alarm clock suddenly starts ringing.&#x000A;&#x000A;The young boy and the bearded man jump with fright. With a scared look on his face, the young boy switches the alarm clock off.&#x000A;&#x000A;The young woman arrives from the Hallway, looking quite confused.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1381"/>
+    </children>
+  </item>
+  <item nodeId="node-1381">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The young woman gets into the king-sized bed and pulls the covers over herself with a confused look on her face.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1382"/>
+    </children>
+  </item>
+  <item nodeId="node-1382">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You shimmer through to the Hallway.&#x000A;&#x000A;Hallway&#x000A;A mirror hangs on the wall here. A bedroom door leads back in to the master bedroom. The landing lies to the north.&#x000A;&#x000A;You can see a teddy bear and a pedestal (on which is a radio) here.&#x000A;&#x000A;"Keep in mind rule #1: always consider your surroundings" he whispers.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1383"/>
+    </children>
+  </item>
+  <item nodeId="node-1383">
+    <command xml:space="preserve">haunt radio</command>
+    <result xml:space="preserve">The radio switches itself on and begins to cycle through channels seemingly at random.&#x000A;&#x000A;"Keep in mind rule #3: variety is vital to a good haunt" whispers the teddy bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1384"/>
+    </children>
+  </item>
+  <item nodeId="node-1384">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear collapses to the floor in anticipation of someone coming. The young boy arrives from the Master Bedroom, looking quite scared.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1385"/>
+    </children>
+  </item>
+  <item nodeId="node-1385">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;With a scared look on his face, the young boy switches the radio off.&#x000A;&#x000A;The young boy goes into the master bedroom, looking fairly scared.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -11028,11 +11200,12 @@
   </item>
   <item nodeId="node-1217">
     <command xml:space="preserve">x teddy</command>
-    <result xml:space="preserve">"Psst! It's me." hisses your plush companion.&#x000A;&#x000A;.A more experienced buddy of yours, who kindly offered to come along and help you on your first haunt. He's looking at his paws.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1218"/>
+      <child nodeId="node-1355"/>
     </children>
   </item>
   <item nodeId="node-1218">
@@ -11047,6 +11220,129 @@
   <item nodeId="node-1219">
     <command xml:space="preserve">x teddy</command>
     <result xml:space="preserve">.A more experienced buddy of yours, who kindly offered to come along and help you on your first haunt. He's standing on one leg.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1355">
+    <command xml:space="preserve">x teddy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1356"/>
+    </children>
+  </item>
+  <item nodeId="node-1356">
+    <command xml:space="preserve">x teddy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1357"/>
+    </children>
+  </item>
+  <item nodeId="node-1357">
+    <command xml:space="preserve">x teddy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1358"/>
+    </children>
+  </item>
+  <item nodeId="node-1358">
+    <command xml:space="preserve">x teddy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1359"/>
+    </children>
+  </item>
+  <item nodeId="node-1359">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a teddy bear with a bored look on his face, a lamp and a closet here.&#x000A;&#x000A;"Psst! It's me" hisses your plush companion.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1360"/>
+    </children>
+  </item>
+  <item nodeId="node-1360">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the young boy. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed (under the covers of which is a sleeping young boy), a teddy bear with a bored look on his face, a lamp and a closet here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1361"/>
+    </children>
+  </item>
+  <item nodeId="node-1361">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear whispers "It's worth giving a little thought to rule #1: always consider your surroundings".&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1362"/>
+    </children>
+  </item>
+  <item nodeId="node-1362">
+    <command xml:space="preserve">haunt bed</command>
+    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy wakes up not quite sure of what's going on. The teddy bear immediately drops to the floor to evade suspicion. &#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1363"/>
+    </children>
+  </item>
+  <item nodeId="node-1363">
+    <command xml:space="preserve">haunt bed</command>
+    <result xml:space="preserve">As you haunt the child's bed, it starts to shake back and forth.&#x000A;&#x000A;The young boy screams. The young boy leaps out of the child's bed.&#x000A;&#x000A;The young boy runs out into the landing, looking fairly scared.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1364"/>
+    </children>
+  </item>
+  <item nodeId="node-1364">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a young boy and a ball here.&#x000A;&#x000A;The young boy runs towards the hallway, looking fairly scared.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1365"/>
+    </children>
+  </item>
+  <item nodeId="node-1365">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The teddy bear waddles out into the landing from the child's bedroom. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1366"/>
+    </children>
+  </item>
+  <item nodeId="node-1366">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the child's bed. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed, a lamp and a closet here.&#x000A;&#x000A;The teddy bear waddles into the child's bedroom from the landing. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1367"/>
+    </children>
+  </item>
+  <item nodeId="node-1367">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You shimmer through to the Landing.&#x000A;&#x000A;Landing&#x000A;A framed family photo hangs on the wall. A wooden door leads back in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun is up here.&#x000A;&#x000A;You can see a ball here.&#x000A;&#x000A;The teddy bear waddles out into the landing from the child's bedroom. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1368"/>
+    </children>
+  </item>
+  <item nodeId="node-1368">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">You shimmer through to the Child's Bedroom.&#x000A;&#x000A;Child's Bedroom&#x000A;A typical kid's bedroom - all bright colours and optimism. You'd spit if you could. A small window paints a trapeziod of light over the child's bed. There is a wooden door leading out.&#x000A;&#x000A;You can see the child's bed, a lamp and a closet here.&#x000A;&#x000A;The teddy bear waddles into the child's bedroom from the landing. He whispers "It's worth giving a little thought to rule #2: make sure to take your time".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
