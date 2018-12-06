@@ -12,6 +12,12 @@ A victim is a kind of person. A victim is usually passive.
 
 A fear-state is a kind of value. The fear-states are asleep, confused, unsettled and scared. A victim has a fear-state. A victim is usually asleep. Understand the fear-state property as describing a victim. The description of a victim is usually "[The noun] [if the noun is asleep]is sleeping[otherwise]looks [one of]quite[or]fairly[or]pretty[at random] [fear-state][end if].".
 
+[To replace is a verb.
+
+Describing relates various text to one fear-state. The verb to replace means the describing relation.
+
+"baffled", "bewildered", "bemused", "confused" and "disconnected" replace confused.]
+
 Before printing the name of a victim (called target) while printing room description details:
 	say "[unless the target is asleep][fear-state of the target][otherwise]sleeping[end if] ".
 
