@@ -249,40 +249,57 @@ Instead of exiting:
 	
 [Suggestion: Add some code to allow the player to go through doors]
 
-[A couple of kludges to make sure victim movement doesn't mess up paragraph spacing.]
-After an actor which is not the teddy bear going a direction when the player can see the actor:
-	now break-required is false;
-	continue the action;		
-	
+[A kludge to make sure victim movement doesn't mess up paragraph spacing.]
 After an actor entering a bunk when the player can see the actor:
 	now break-required is false;
-	continue the action;
+	continue the action.
 
 [Make sure the teddy bear anticipates victim movement, so as not to get caught in the act.]
-After an actor which is not the teddy bear going a direction when the player can see the actor:
+After an actor which is not the teddy bear going a direction:
 	if the teddy bear can be seen by the actor and the actor is a victim:
-		say "[The teddy bear] collapses to the floor in anticipation of someone coming. [run paragraph on]";
+		if the teddy bear can be seen by the player:
+			say "[The teddy bear] collapses to the floor in anticipation of someone coming. [run paragraph on]";
 		now break-required is false;
 		now the teddy bear is passive;
-	 say "[The actor] [arrive] from [the room gone from], looking quite [fear-state of the actor].".
+	continue the action.
+		
+After an actor which is not the teddy bear going a direction:
+	if the player can see the actor:
+		say "[The actor] [arrive] from [the room gone from], looking quite [fear-state of the actor].";
+		now break-required is false;
+	continue the action;
 
-[Custom movement descriptions for the teddy bear.]	
+After an actor which is not the teddy bear going a direction:
+	if the room gone from is the location of the player:
+		let bearing be the best route from the room gone from to the room gone to, using doors;
+		let origin be "[the room gone from]" in lower case;
+		let destination be "[the room gone to]" in lower case;
+		say "[The actor] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][go][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
+		now break-required is false.
+
+[Custom descriptions for the teddy bear.]	
 After the teddy bear going a direction when the player can see the teddy bear:
-	say "[The teddy bear] [if the room gone from encloses a victim which is not asleep]quietly crawls out from[otherwise]waddles in from[end if] [the room gone from]. [run paragraph on]";
+	let bearing be the best route from the room gone from to the room gone to, using doors;
+	let origin be "[the room gone from]" in lower case;
+	let destination be "[the room gone to]" in lower case;
+	say "[The teddy bear] [if the room gone from encloses a victim which is not asleep]quietly crawls[otherwise]waddles[end if] [if the bearing is outside]out [end if]into [destination] from [origin]. [run paragraph on]";
 	now break-required is true.
 	
 [Initial description of the teddy bear]
 After printing the name of the teddy bear while printing the locale description of the noun:
 	if Sound Asleep is happening:
 		say " with a bored look on his face".
-		
+	
+After printing the name of the passive teddy bear while printing the locale description of the noun:
+	say " (currently playing dead)".
+	
 After printing the name of the teddy bear when Finding Teddy is happening:
 	now the teddy bear is discovered.
 	
 [Custom responses for switching off devices, leaving the location and getting back into bed.]
 standard report switching off rule response (A) is "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off.".
 	
-describe room gone into rule response (C) is "[The actor] [if the actor is the young boy and Run to Mommy is happening]runs off[otherwise if the actor is a victim][go][otherwise]waddles off[end if] into [the room gone to][if the actor is a victim], looking fairly [fear-state of the actor][end if]".
+[describe room gone into rule response (C) is "".]
 
 standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] with [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face.".
 
