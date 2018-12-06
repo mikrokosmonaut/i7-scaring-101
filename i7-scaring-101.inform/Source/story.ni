@@ -115,7 +115,8 @@ Report an actor haunting a supporter:
 		let R be a random thing supported by the noun;
 		move R to the holder of the noun;
 		say "[The R] falls to the floor.";
-		now break-required is false.
+		now break-required is false;
+		say "Haunting supporter: set break to true [run paragraph on]";
 	
 [This bit lists the behavioural definitions for haunting generic furniture. The idea is that each kind of behaviour will affect the victims in individual ways.
 
@@ -262,6 +263,16 @@ After an actor entering a bunk when the player can see the actor:
 	continue the action.
 
 [Describe victim movement making sure the teddy bear anticipates it, so as not to get caught in the act.]
+After an actor switching off a device when the actor can be seen by the player:
+	say "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off. [run paragraph on]";
+	now break-required is true;
+	continue the action;
+	
+After an actor exiting when the actor can be seen by the player:	
+	say "[if the actor is mentioned and the actor is female]She then[otherwise if the actor is mentioned]He then[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from]. [run paragraph on]";
+	now break-required is false;
+	continue the action.
+
 After an actor which is not the teddy bear going a direction:
 	if the teddy bear can be seen by the actor and the actor is a victim:
 		if the teddy bear can be seen by the player:
@@ -281,16 +292,8 @@ After an actor which is not the teddy bear going a direction:
 		let bearing be the best route from the room gone from to the room gone to, using doors;
 		let origin be "[the room gone from]" in lower case;
 		let destination be "[the room gone to]" in lower case;
-		say "[if the actor is mentioned and the actor is female]She[otherwise if the actor is mentioned]He[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
-		now break-required is false.
-		
-After an actor switching off a device when the actor can be seen by the player:
-	say "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off. [run paragraph on]";
-	now break-required is true.
-
-After an actor exiting when the actor can be seen by the player:	
-	say "[if the actor is mentioned and the actor is female]She[otherwise if the actor is mentioned]He[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from]. [run paragraph on]";
-	now break-required is true.
+		say "[if the actor is mentioned and the actor is female]She promptly[otherwise if the actor is mentioned]He promptly[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
+		now break-required is false;
 
 [Custom descriptions for the teddy bear.]	
 After the teddy bear going a direction when the player can see the teddy bear:
@@ -298,7 +301,7 @@ After the teddy bear going a direction when the player can see the teddy bear:
 	let origin be "[the room gone from]" in lower case;
 	let destination be "[the room gone to]" in lower case;
 	say "[The teddy bear] [if the room gone from encloses a victim which is not asleep]quietly crawls[otherwise]waddles[end if] [if the bearing is outside]out [end if]into [destination] from [origin]. [run paragraph on]";
-	now break-required is true.
+	now break-required is true;
 	
 [Initial description of the teddy bear]
 After printing the name of the teddy bear while printing the locale description of the noun:
@@ -332,7 +335,6 @@ Every turn when a device is switched on:
 		if P is not nothing:
 			try P switching off the disturbance;
 			now P is passive;
-			now break-required is false;
 		otherwise:
 			let P be a random active victim;
 			if P is nothing:
@@ -371,22 +373,30 @@ Every turn when a victim which is not asleep can see the active teddy bear:
 Every turn when the teddy bear is passive:
 	unless the teddy bear can be seen by a victim:
 		if the teddy bear can be seen by the player:
-			say "[The teddy bear] gets to his feet. [run paragraph on]";
+			say "[If the teddy bear is mentioned]He then[otherwise][The teddy bear][end if] awkwardly gets to his feet. [run paragraph on]";
 			now break-required is true;
 		now the teddy bear is active.
 
 [Every so often, when it's safe, the teddy bear will whisper advice to the player on how to continue.]	
-A last every turn rule:
+Every turn:
 	if the player can see the active teddy bear and a random chance of 1 in 5 succeeds:
 		say "'[one of]Keep in mind[or]Don't forget[or]It's worth giving a little thought to[purely at random] [one of]rule #1: always consider your surroundings[or]rule #2: make sure to take your time[or]rule #3: variety is vital to a good haunt[at random]' [if the teddy bear is mentioned]he whispers[otherwise]whispers [the teddy bear][end if].";
 		now break-required is false;
 
 [Add a paragraph break if it is needed.]
 A last every turn rule:
+	[say "Break required ended up being [break-required].";]
 	if break-required is true:
 		say paragraph break;
 		now break-required is false.
-	
+		
+[Before issuing the response text of announce the score rule response (D):
+	if break-required is true:
+		say paragraph break;
+		now break-required is false.]
+		
+The standard report switching off rule is not listed in the report switching off rulebook.
+
 Chapter 2 - Content
 
 Section 1 - Scenes
@@ -445,7 +455,7 @@ to say assessment:
 Section 2 - World
 
 [The Child's Bedroom]
-The Child's Bedroom is a room. The description of it is "A typical kid's bedroom - all bright colours and optimism. [We][']d spit if [we] could. [A small window] paints a trapeziod of light over [if the player can see the young boy]the young boy[otherwise]the child's bed[end if]. There is [a wooden door] leading out.". The child's bed is a bunk in the Child's Bedroom. The young boy is a male victim. The quarters of the young boy is the child's bed. The young boy is in the child's bed. The teddy bear is a toy in the Child's bedroom. A lamp, a closet and a small window are in the child's bedroom.
+The Child's Bedroom is a room. The description of it is "A typical kid's bedroom - all bright colours and optimism. [We][']d spit if [we] could. [A small window] paints a daunting trapezoid of moonlight over [if the player can see the young boy]the young boy[otherwise]the child's bed[end if]. There is [a wooden door] leading out.". The child's bed is a bunk in the Child's Bedroom. The young boy is a male victim. The quarters of the young boy is the child's bed. The young boy is in the child's bed. The teddy bear is a toy in the Child's bedroom. A lamp, a closet and a small window are in the child's bedroom.
 
 The description of the teddy bear is "A more experienced buddy of [ours], who kindly offered to come along and help [us] on [our] first haunt. He's [if active][one of]looking intently at his paws[or]waiting to see what [we][']ll do next[or]busy standing on one leg[at random][otherwise]currently playing dead to avoid suspicion[end if].".
 
@@ -454,7 +464,7 @@ The small window is a window.
 The closet is an openable fixed in place closed container. The clothes and the jack-in-box are in the closet.
 
 [Things in the closet]
-The clothes are plural-named. Haunting the clothes is scary behavior. The weirdness of the clothes is "[if the clothes are contained by the closet]The clothes fly out of the closet in all directions[otherwise]The clothes circle the room as if locked in a ghastly dance before promptly falling back to the floor[end if].". Understand "scattered clothes" as the clothes when the printed name of the clothes is "scattered clothes".
+The clothes are plural-named. Haunting the clothes is scary behavior. The weirdness of the clothes is "[if the clothes are contained by the closet]The clothes fly out of the closet in all directions[otherwise]The clothes circle the room as though locked in a ghastly dance before promptly falling back to the floor[end if].". Understand "scattered clothes" as the clothes when the printed name of the clothes is "scattered clothes".
 The jack-in-box can be sprung or unsprung. The jack-in-box is unsprung. Haunting the jack-in-box is scary behavior. The weirdness of the jack-in-box is "[if the jack-in-box is unsprung]The little handle on the side of the jack-in-box starts to wind ever so slowly... all of a sudden the jack-in-box springs to life with a laugh so spiteful, [we] wonder why anyone would've chosen it for a children's toy[otherwise]The jack-in-box starts to bend in all directions, laughing in that deliciously hideous way you've come to appreciate[end if].".
 
 The wooden door is an openable closed door. The wooden door is outside from the Child's Bedroom and inside from the Landing.
@@ -482,11 +492,11 @@ After haunting the mirror when the location of the player does not enclose a vic
 The bedroom door is an openable closed door. The bedroom door is outside from the Master Bedroom and inside from the Hallway.
 
 [The Master Bedroom]
-The Master Bedroom is a room. The description of it is "Moonlight shines in through [the large window][if the player can see the bearded man and the player can see the young woman], the shadow of the frame artificially segmenting the man and woman as if silently commenting on the state of their marriage[end if].  [A bedroom door] leads[if the Hallway is visited] back[end if] out to the hallway. ". The king-sized bed is a bunk in the Master Bedroom. The bearded man and the young woman are victims. The bearded man is male. The young woman is female. The quarters of the bearded man is the king-sized bed. The quarters of the young woman is the king-sized bed. The bearded man and the young woman are in the king-sized bed. The TV, a bed-side table and a large window are in the Master Bedroom.
+The Master Bedroom is a room. The description of it is "Moonlight shines in through [the large window][if the player can see the bearded man and the player can see the young woman], the frame's shadow visually segmenting the man and woman as though silently commenting on the state of their marriage[end if]. [A bedroom door] leads[if the Hallway is visited] back[end if] out to the hallway. ". The king-sized bed is a bunk in the Master Bedroom. The bearded man and the young woman are victims. The bearded man is male. The young woman is female. The quarters of the bearded man is the king-sized bed. The quarters of the young woman is the king-sized bed. The bearded man and the young woman are in the king-sized bed. The TV, a bed-side table and a large window are in the Master Bedroom.
 
 The large window is a window.
 The TV is a fixed in place device. Haunting the TV is scary behavior. The weirdness of the TV is "The TV switches itself on and begins to cycle through channels seemingly at random.".
 The table is a fixed in place supporter. The alarm clock and the flashlight are on the table.
 
-The alarm clock is a device. Haunting the alarm clock is loud behavior. The weirdness of the alarm clock is "[if the alarm clock is switched off]The alarm clock suddenly starts ringing[otherwise]The alarm clock distorts itself into a shriek resembling some kind of alien siren[end if].".
+The alarm clock is a device. Haunting the alarm clock is loud behavior. The weirdness of the alarm clock is "[if the alarm clock is switched off]The alarm clock suddenly starts to sound[otherwise]The alarm clock distorts itself into a shriek resembling some kind of alien siren[end if].".
 The flashlight is an illuminator.
