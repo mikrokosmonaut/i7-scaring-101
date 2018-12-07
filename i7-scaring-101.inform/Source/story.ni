@@ -7,14 +7,17 @@ Section 1 - People
 
 A person can be active or passive.
 
+The description of the player is "[We] see nothing. You're a poltergeist, what did [we] expect? [one of]Socks and sandals[or]Cashmere and denim[or]Silk pajamas[at random]?".
+
 A toy is a kind of person. A toy is usually active. A toy can be discovered or undiscovered. A toy is usually undiscovered.
+
 A victim is a kind of person. A victim is usually passive.
 
 A fear-state is a kind of value. The fear-states are asleep, confused, unsettled and scared. A victim has a fear-state. A victim is usually asleep. Understand the fear-state property as describing a victim. The description of a victim is usually "[The noun] [if the noun is asleep]is sleeping[otherwise]looks [one of]quite[or]fairly[or]pretty[at random] [fear-state][end if].".
 
 [To replace is a verb.
 
-Describing relates various text to one fear-state. The verb to replace means the describing relation.
+Describing relates various words to one fear-state. The verb to replace means the describing relation.
 
 "baffled", "bewildered", "bemused", "confused" and "disconnected" replace confused.]
 
@@ -305,14 +308,24 @@ After the teddy bear going a direction when the player can see the teddy bear:
 	
 [Initial description of the teddy bear]
 After printing the name of the teddy bear while printing the locale description of the noun:
-	if Sound Asleep is happening:
-		say " with a bored look on his face".
-	
-After printing the name of the passive teddy bear while printing the locale description of the noun:
-	say " (currently playing dead)".
+	if the teddy bear is passive:
+		if Sound Asleep has ended:
+			say " (currently playing dead)";
+	otherwise:
+		if Finding Teddy is happening:
+			say " with a bored look on his face";
+		otherwise if Sound Asleep is happening:
+			say " looking eager with anticipation";
+		otherwise if Paranormal Activity is happening:
+			say " with a wry smile on his face";
+		otherwise if Run to Mommy is happening:
+			say " laughing devilishly".
 	
 After printing the name of the teddy bear when Finding Teddy is happening:
 	now the teddy bear is discovered.
+	
+After examining the teddy bear:
+	now the teddy bear is mentioned.
 	
 [Custom response for getting back into bed.]
 standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] with [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face.".
@@ -397,6 +410,15 @@ A last every turn rule:
 		
 The standard report switching off rule is not listed in the report switching off rulebook.
 
+Section 6 - Humiliation
+
+The last error is a text that varies. The last error is "". 
+
+Before printing a parser error:
+	unless the last error is "":
+		say "This is just like that time [we] tried to ['][last error][']. [run paragraph on]";
+	now the last error is the player's command.
+
 Chapter 2 - Content
 
 Section 1 - Scenes
@@ -420,7 +442,12 @@ Sound Asleep is a scene. Sound asleep begins when every victim is asleep. Sound 
 Finding Teddy is a scene. Finding Teddy begins when play begins. Finding Teddy ends when the teddy bear is discovered.
 
 When Finding Teddy ends:
-	say "'Psst! It's me' hisses your plush companion.".
+	now the indefinite article of the teddy bear is "the";
+	if a victim that is not asleep can see the teddy bear:
+		say "[The teddy bear] signals at you to meet him outside. [run paragraph on]";
+	otherwise:
+		say "'Psst! It's me' hisses your plush companion. [run paragraph on]";
+	now break-required is true.
 
 Paranormal Activity is a scene. Paranormal Activity begins when Sound Asleep ends. Paranormal Activity ends when every victim is scared.
 
@@ -470,7 +497,7 @@ The jack-in-box can be sprung or unsprung. The jack-in-box is unsprung. Haunting
 The wooden door is an openable closed door. The wooden door is outside from the Child's Bedroom and inside from the Landing.
 
 [The Landing]
-The Landing is a room. The description of it is "A [framed family photo] hangs on the wall. [first time]'The illusion of permanence' [we] think to [ourselves]. [only]A [wooden door] leads[if the Child's Bedroom is visited] back[end if] in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun[first time] (read horror)[only] is up here.". The Stairs are down from the Landing. Instead of going to the Stairs, say "There's nobody down there to scare - [the teddy bear] already checked.". A ball and a framed family photo are in the Landing.
+The Landing is a room. The description of it is "A [framed family photo] hangs on the wall. [first time]'The illusion of permanence' [we] think to [ourselves]. [only]A [wooden door] leads[if the Child's Bedroom is visited] back[end if] in to the child's bedroom. The hallway itself continues south from here and while there is a staircase leading down to the first floor, all the fun[first time] (read horror)[only] is up here.". The Stairs are down from the Landing. Instead of going to the Stairs, say "There's nobody down there to scare - [we] already checked.". A ball and a framed family photo are in the Landing.
 
 Haunting the ball is creepy behavior. The weirdness of the ball is "The ball spontaneously rolls off [if the ball is in the Landing]down the Hallway[otherwise]towards the Landing[end if].".
 
