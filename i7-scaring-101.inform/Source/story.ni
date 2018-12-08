@@ -13,16 +13,18 @@ A toy is a kind of person. A toy is usually active. A toy can be discovered or u
 
 A victim is a kind of person. A victim is usually passive.
 
-A fear-state is a kind of value. The fear-states are asleep, confused, unsettled and scared. A victim has a fear-state. A victim is usually asleep. Understand the fear-state property as describing a victim. The description of a victim is usually "[The noun] [if the noun is asleep]is sleeping[otherwise]looks [one of]quite[or]fairly[or]pretty[at random] [fear-state][end if].".
+A fear-state is a kind of value. The fear-states are asleep, confused, unsettled and scared. A victim has a fear-state. A victim is usually asleep. Understand the fear-state property as describing a victim. The description of a victim is usually "[The noun] [if the noun is asleep]is sleeping[otherwise][one of]looks[or]appears[at random] [synonym-text of the noun][end if].".
 
-[To replace is a verb.
+[A way of replacing the fear-state with a random synonym to make the game feel more natural. Suggested by Eleas.]
+The synonym-text rules are an object based rulebook with default success.
+A synonym-text rule for a confused victim: say "[one of]baffled[or]bemused[or]bewildered[or]confused[or]perplexed[at random]".
+A synonym-text rule for an unsettled victim: say "[one of]anxious[or]panicked[or]panicky[or]shaken[or]unsettled[at random]".
+A synonym-text rule for a scared victim: say "[one of]afraid[or]frightened[or]scared[or]terrified[or]terror-stricken[at random]".
 
-Describing relates various words to one fear-state. The verb to replace means the describing relation.
-
-"baffled", "bewildered", "bemused", "confused" and "disconnected" replace confused.]
+To say synonym-text of (v - a victim): follow the synonym-text rules for the v.
 
 Before printing the name of a victim (called target) while printing room description details:
-	say "[unless the target is asleep][fear-state of the target][otherwise]sleeping[end if] ".
+	say "[unless the target is asleep][synonym-text of the target][otherwise]sleeping[end if] ".
 
 [This section categorises things as either hauntable or unhauntable. All hauntable things have a non-empty text called 'weirdness', which describes the behaviour they exhibit.]
 Section 2 - Hauntable Things
@@ -267,7 +269,10 @@ After an actor entering a bunk when the player can see the actor:
 
 [Describe victim movement making sure the teddy bear anticipates it, so as not to get caught in the act.]
 After an actor switching off a device when the actor can be seen by the player:
-	say "With [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off. [run paragraph on]";
+	let S be the substituted form of "[synonym-text of the actor]";
+	let A be "a";
+	if S matches the regular expression "^<aeiou>.*", now A is "an";
+	say "With [A] [S] look on [if the actor is male]his[otherwise]her[end if] face, [the actor] [switch] [the noun] off. [run paragraph on]";
 	now break-required is true;
 	continue the action;
 	
@@ -286,7 +291,7 @@ After an actor which is not the teddy bear going a direction:
 		
 After an actor which is not the teddy bear going a direction:
 	if the player can see the actor:
-		say "[The actor] [arrive] from [the room gone from], looking quite [fear-state of the actor].";
+		say "[The actor] [arrive] from [the room gone from], looking fairly [synonym-text of the actor].";
 		now break-required is false;
 	continue the action;
 
@@ -295,7 +300,7 @@ After an actor which is not the teddy bear going a direction:
 		let bearing be the best route from the room gone from to the room gone to, using doors;
 		let origin be "[the room gone from]" in lower case;
 		let destination be "[the room gone to]" in lower case;
-		say "[if the actor is mentioned and the actor is female]She promptly[otherwise if the actor is mentioned]He promptly[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking fairly [fear-state of the actor].";
+		say "[if the actor is mentioned and the actor is female]She promptly[otherwise if the actor is mentioned]He promptly[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking rather [synonym-text of the actor].";
 		now break-required is false;
 
 [Custom descriptions for the teddy bear.]	
@@ -328,7 +333,7 @@ After examining the teddy bear:
 	now the teddy bear is mentioned.
 	
 [Custom response for getting back into bed.]
-standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] with [if the fear-state of the actor is unsettled]an[otherwise]a[end if] [fear-state of the actor] look on [if the actor is male]his[otherwise]her[end if] face.".
+standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] looking quite [synonym-text of the actor].".
 
 [Various rules to control NPCs.]
 Section 5 - Every Turn Rules

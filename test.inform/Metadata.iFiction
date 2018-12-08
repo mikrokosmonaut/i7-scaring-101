@@ -2,12 +2,12 @@
 <ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
     <story>
         <identification>
-            <ifid>B7398F3E-7D9E-43DC-8000-6A9AD90DB0A6</ifid>
+            <ifid>454E072E-4D55-4D08-BCDB-7AB8733B5D91</ifid>
             <format>glulx</format>
         </identification>
         <bibliographic>
-            <title>Scaring 101</title>
-            <author>Mikrokosmonaut</author>
+            <title>test</title>
+            <author>B David Paulsen</author>
             <headline>An Interactive Fiction</headline>
             <genre>Fiction</genre>
             <firstpublished>2018</firstpublished>
