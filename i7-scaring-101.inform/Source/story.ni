@@ -44,7 +44,7 @@ A bunk is a kind of enterable open unopenable fixed in place container. The inde
 
 For printing room description details of a bunk (called space):
 	if the space contains a victim (called inhabitant):
-		say " (under the covers of which [is-are a list of victims contained by the space])";
+		say " (under the covers of which [is-are the list of victims contained by the space])";
 		omit contents in listing;
 	otherwise:
 		stop.
@@ -279,7 +279,6 @@ After an actor switching off a device when the actor can be seen by the player:
 After an actor exiting when the actor can be seen by the player:	
 	say "[if the actor is mentioned and the actor is female]She then[otherwise if the actor is mentioned]He then[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]leaps out[otherwise]gets out[end if] of [the container exited from]. [run paragraph on]";
 	now break-required is false;
-	continue the action.
 
 After an actor which is not the teddy bear going a direction:
 	if the teddy bear can be seen by the actor and the actor is a victim:
@@ -291,7 +290,7 @@ After an actor which is not the teddy bear going a direction:
 		
 After an actor which is not the teddy bear going a direction:
 	if the player can see the actor:
-		say "[The actor] [arrive] from [the room gone from], looking fairly [synonym-text of the actor].";
+		say "[The actor] [arrive] from [the room gone from], looking sufficiently [synonym-text of the actor].";
 		now break-required is false;
 	continue the action;
 
@@ -300,7 +299,7 @@ After an actor which is not the teddy bear going a direction:
 		let bearing be the best route from the room gone from to the room gone to, using doors;
 		let origin be "[the room gone from]" in lower case;
 		let destination be "[the room gone to]" in lower case;
-		say "[if the actor is mentioned and the actor is female]She promptly[otherwise if the actor is mentioned]He promptly[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking rather [synonym-text of the actor].";
+		say "[if the actor is mentioned and the actor is female]She promptly[otherwise if the actor is mentioned]He promptly[otherwise][The actor][end if] [if the actor is the young boy and Run to Mommy is happening]runs[otherwise][head][end if] [if the bearing is inside]into[otherwise if the bearing is outside]out into[otherwise]towards[end if] [destination], looking pretty [synonym-text of the actor].";
 		now break-required is false;
 
 [Custom descriptions for the teddy bear.]	
@@ -333,7 +332,7 @@ After examining the teddy bear:
 	now the teddy bear is mentioned.
 	
 [Custom response for getting back into bed.]
-standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] looking quite [synonym-text of the actor].".
+standard report entering rule response (C) is "[The actor] [get] into [the noun] and pulls the covers over [if the actor is male]himself[otherwise]herself[end if] looking rather [synonym-text of the actor].".
 
 [Various rules to control NPCs.]
 Section 5 - Every Turn Rules
@@ -486,8 +485,11 @@ to say assessment:
 	
 Section 2 - World
 
+[The lights]
+The lights are a backdrop. The lights are everywhere. The description of the lights is "Currently switched off, although that means very little to a poltergeist such as [ourselves].". Understand "light" as the lights. The weirdness of the lights is "The lights above [us] begin to flicker in a haphazard fashion. After a few seconds, the disturbance abates.". Haunting the lights is creepy behavior.
+
 [The Child's Bedroom]
-The Child's Bedroom is a room. The description of it is "A typical kid's bedroom - all bright colours and optimism. [We][']d spit if [we] could. [A small window] paints a daunting trapezoid of moonlight over [if the player can see the young boy]the young boy[otherwise]the child's bed[end if]. There is [a wooden door] leading out.". The child's bed is a bunk in the Child's Bedroom. The young boy is a male victim. The quarters of the young boy is the child's bed. The young boy is in the child's bed. The teddy bear is a toy in the Child's bedroom. A lamp, a closet and a small window are in the child's bedroom.
+The Child's Bedroom is a room. The description of it is "A typical kid's bedroom - all bright colours and optimism. [We][']d spit if [we] could. [A small window] paints a daunting trapezoid of moonlight over [if the player can see the young boy]a young boy[otherwise]a child's bed[end if]. There is [a wooden door] leading out.". The child's bed is a bunk in the Child's Bedroom. The young boy is a male victim. The quarters of the young boy is the child's bed. The young boy is in the child's bed. The teddy bear is a toy in the Child's bedroom. A lamp, a closet and a small window are in the child's bedroom.
 
 The description of the teddy bear is "A more experienced buddy of [ours], who kindly offered to come along and help [us] on [our] first haunt. He's [if active][one of]looking intently at his paws[or]waiting to see what [we][']ll do next[or]busy standing on one leg[at random][otherwise]currently playing dead to avoid suspicion[end if].".
 
